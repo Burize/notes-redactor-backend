@@ -1,19 +1,26 @@
-# KoaJS & Typescript Starter Project
+# Rest server for [notes redactor](https://github.com/Burize/notes-redactor) 
 
-Requirements:
- * Node v8
+### Used features:
+ * [KoaJS](https://github.com/koajs/koa) as rest framework
+ * TypeScript
+ * MongoDB
 
-Features:
- * Watch mode - server auto-restarts when code changes
- * Koa v2 with #beautiful async functions
+### Restore and start DataBase
 
-Included middleware:
- * koa-router
- * Custom logger with pretty + JSON modes (based on `NODE_ENV`)
+```bash
+# create local folder for data base 
+$ mkdir dataBase
 
-## Getting Started
+# restore data from backup
+$ mongorestore backup
 
+# run mongo at restored dump
+$  mongod --port 27017 --dbpath=./dataBase
 ```
+
+### Start server
+
+```bash
 npm i
-npm run watch-server
+npm run dev
 ```

@@ -4,8 +4,8 @@
   "main": "dist/index.js",
   "license": "CC0-1.0",
   "scripts": {
-    "build-server": "tslint --project . && tsc",
-    "watch-server": "cross-env NODE_ENV=development nodemon --watch src/**/* -e ts,tsx --exec ts-node src/server/server.ts"
+    "build": "tslint --project . && tsc",
+    "dev": "cross-env NODE_ENV=development nodemon --watch src/ -e ts,tsx --exec ts-node src/core/server.ts"
   },
   "devDependencies": {
     "@types/koa": "2.0.39",
@@ -17,7 +17,11 @@
     "typescript": "2.5.2"
   },
   "dependencies": {
+    "@types/koa-bodyparser": "4.3.0",
+    "@types/mongoose": "5.5.3",
     "koa": "2.3.0",
-    "koa-router": "7.2.1"
+    "koa-bodyparser": "4.2.1",
+    "koa-router": "7.2.1",
+    "mongoose": "5.5.12"
   }
 }
