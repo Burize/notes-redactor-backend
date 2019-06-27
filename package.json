@@ -1,8 +1,7 @@
 {
-  "name": "koa-typescript-starter",
+  "name": "notes-redactor",
   "version": "1.0.0",
   "main": "dist/index.js",
-  "license": "CC0-1.0",
   "scripts": {
     "build": "tslint --project . && tsc",
     "dev": "cross-env NODE_ENV=development nodemon --watch src/ -e ts,tsx --exec ts-node src/core/server.ts",
