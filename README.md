@@ -24,3 +24,8 @@ $  mongod --port 27017 --dbpath=./dataBase
 npm i
 npm run dev
 ```
+
+
+### TODO
+
+At that moment there is no relations between users and notes: all users work with all notes. Need make separate notes by user (auth, cookie and etc). 
