@@ -29,4 +29,19 @@ export function noteNormalizer(note: INote): INote {
 
   const { title, body, id } = note;
   return { title, body, id };
-};
+}
+
+export function convertNoteToResponse(note: INoteModel): INote {
+  if (!note) {
+    throw Error(`invalid object when convertNoteToResponse: ${note}`);
+  }
+  if (!isString(note.title)) {
+    throw Error('Note title must be a string type');
+  }
+  if (!isString(note.body)) {
+    throw Error('Note body must be a string type');
+  }
+
+  const { title, body, _id } = note;
+  return { title, body, id: _id };
+}
