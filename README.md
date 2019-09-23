@@ -9,13 +9,15 @@
 
 ```bash
 # create local folder for data base 
-$ mkdir dataBase
+mkdir dataBase
+
+# run mongo at created folder
+mongod --port 27017 --dbpath=./dataBase
 
 # restore data from backup
-$ mongorestore backup
+mongorestore backup
 
-# run mongo at restored dump
-$  mongod --port 27017 --dbpath=./dataBase
+
 ```
 
 ### Start server
